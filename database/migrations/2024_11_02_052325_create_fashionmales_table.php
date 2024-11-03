@@ -13,10 +13,13 @@ return new class extends Migration
     {
         Schema::create('fashionmales', function (Blueprint $table) {
             $table->id();
+            $table->string('img');
             $table->string('produk');
-            $table->string('description');
+            $table->longText('description');
             $table->integer('jumlah');
-            $table->integer('harga');
+            $table->string('harga');
+            $table->string('link');
+            $table->binary('pic',length:16, fixed: true);
             $table->timestamps();
         });
     }
