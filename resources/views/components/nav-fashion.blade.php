@@ -3,7 +3,7 @@
       <button 
           type="button" 
           @click="isOpen = !isOpen" 
-          class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-lime-800 px-3 py-2 text-sm font-semibold text-lime-300 shadow-sm ring-1 ring-inset ring-lime-800 hover:bg-lime-700" 
+          class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-lime-800 px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-lime-800 hover:bg-lime-700" 
           id="menu-button" 
           aria-expanded="true" 
           aria-haspopup="true">

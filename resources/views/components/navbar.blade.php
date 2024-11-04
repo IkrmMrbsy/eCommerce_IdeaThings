@@ -5,12 +5,12 @@
           <div class="flex-shrink-0">
               <img class="h-12 w-12" src="/img/logo.png" alt="Your Company">
           </div>
-          <div class="ml-3 text-lime-300 font-bold text-lg">IdeaThings</div> <!-- Added text here -->
+          <div class="ml-3 text-lime-300 font-bold text-lg">iDeaThings</div> <!-- Added text here -->
           <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
                   <!-- Links -->
-                  <a href="/" class="{{ request()->is('/') ? 'bg-lime-800 text-white' : 'text-lime-300 hover:bg-lime-600 hover:text-white' }} px-3 py-2 rounded-md text-sm font-medium transition duration-200 ease-in-out">Home</a>
-                  <a href="/UMKM" class="{{ request()->is('/UMKM') ? 'bg-lime-800 text-white' : 'text-lime-300 hover:bg-lime-600 hover:text-white' }} px-3 py-2 rounded-md text-sm font-medium transition duration-200 ease-in-out">UMKM</a>
+                  <a href="/" class="{{ request()->is('/') ? 'bg-white-800 text-white' : 'text-white hover:bg-lime-600 hover:text-white' }} px-3 py-2 rounded-md text-sm font-medium transition duration-200 ease-in-out">Home</a>
+                  <a href="/UMKM" class="{{ request()->is('/UMKM') ? 'bg-lime-800 text-white' : 'text-white hover:bg-lime-600 hover:text-white' }} px-3 py-2 rounded-md text-sm font-medium transition duration-200 ease-in-out">UMKM</a>
                   <x-nav-fashion></x-nav-fashion>
               </div>
           </div>
