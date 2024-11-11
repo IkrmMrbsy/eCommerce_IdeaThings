@@ -29,7 +29,7 @@
       tabindex="-1">
       
       <div class="py-1" role="none">
-          <a href="/pakaianpria" class="{{ request()->is('/pakaianpria') ? 'bg-lime-900 text-white' : 'text-lime-700 hover:bg-lime-700 hover:text-white' }} block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Pakaian Pria</a>
+          <a href="/pakaianpria" class="{{ request()->is('/pakaianpria') ? 'bg-lime-900 text-white' : 'text-lime-700 hover:bg-lime-700 hover:text-white' }} block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Pakaian Pria</a>  
           <a href="/pakaianwanita" class="{{ request()->is('/pakaianwanita') ? 'bg-lime-900 text-white' : 'text-lime-700 hover:bg-lime-700 hover:text-white' }} block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Pakaian Wanita</a>
           <a href="/taspria" class="{{ request()->is('/taspria') ? 'bg-lime-900 text-white' : 'text-lime-700 hover:bg-lime-700 hover:text-white' }} block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Tas Pria</a>
           <a href="/taswanita" class="{{ request()->is('/taswanita') ? 'bg-lime-900 text-white' : 'text-lime-700 hover:bg-lime-700 hover:text-white' }} block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Tas Wanita</a>
