@@ -18,8 +18,9 @@ return new class extends Migration
             $table->string('produk');
             $table->longText('description');
             $table->integer('jumlah');
-            $table->string('harga');
+            $table->decimal('harga', 10, 2);
             $table->string('link');
+            $table->string('link_alt')->nullable(); // Menambahkan kolom link_alt untuk Tokopedia
             $table->timestamps();
         });
     }

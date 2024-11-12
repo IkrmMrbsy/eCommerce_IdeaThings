@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.tokopedia-button {
+    @apply inline-block w-full text-center bg-[#3eb640] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#37a537] transition duration-300 shadow-md;
+}

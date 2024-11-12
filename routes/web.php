@@ -1,9 +1,7 @@
 <?php
 
-use App\Models\fashionmale;
-use App\Models\fashionwanita;
-use App\Models\product;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -19,6 +17,11 @@ Route::get('/UMKM', function () {
 
 Route::get('/fashion', function () {
     return view('fashion' , ['title'=> 'Fashion']);
+});
+
+Route::get('/detail/{id}', function ($id) {
+	$product = DB::table('products')->where('id',$id)->first();
+	return view('detail' , ['title'=> 'Detail Produk','product' => $product]);
 });
 
 
