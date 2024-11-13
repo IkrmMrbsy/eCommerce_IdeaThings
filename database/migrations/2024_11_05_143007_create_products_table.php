@@ -20,7 +20,6 @@ return new class extends Migration
             $table->integer('jumlah');
             $table->decimal('harga', 10, 2);
             $table->string('link');
-            $table->string('link_alt')->nullable(); // Menambahkan kolom link_alt untuk Tokopedia
             $table->timestamps();
         });
     }

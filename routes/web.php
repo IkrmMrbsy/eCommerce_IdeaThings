@@ -8,15 +8,18 @@ use Illuminate\Support\Facades\DB;
 
 
 Route::get('/', function () {
-    return view('home', ['title' =>'Home Page']);
-});
+    $products = DB::table('products')->get();
+    return view('home', ['title' => 'Home Page', 'products' => $products]);
+});;
 
 Route::get('/UMKM', function () {
-    return view('UMKM', ['title' =>'UMKM']);
+    $products = DB::table('products')->where('kategori', 'UMKM')->get();
+    return view('UMKM', ['title' => 'UMKM', 'products' => $products]);
 });
 
 Route::get('/fashion', function () {
-    return view('fashion' , ['title'=> 'Fashion']);
+    $products = DB::table('products')->where('kategori', 'Fashion')->get();
+    return view('fashion', ['title' => 'Fashion', 'products' => $products]);
 });
 
 Route::get('/detail/{id}', function ($id) {
