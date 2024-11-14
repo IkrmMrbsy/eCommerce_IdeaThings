@@ -13,8 +13,13 @@ Route::get('/', function () {
 });;
 
 Route::get('/UMKM', function () {
-    $products = DB::table('products')->where('kategori', 'UMKM')->get();
-    return view('UMKM', ['title' => 'UMKM', 'products' => $products]);
+    $products = DB::table('products')
+        ->where('kategori', 'UMKM')
+        ->get();
+    return view('UMKM', [
+        'title' => 'UMKM',
+        'products' => $products
+    ]);
 });
 
 Route::get('/fashion', function () {
@@ -52,4 +57,23 @@ Route::get('/taswanita', function () {
 
 Route::get('/aksesoris', function () {
     return view('aksesoris' , ['title'=> 'Aksesoris']);
+});
+
+Route::get('/', function () {
+    $products = DB::table('products')->get();
+    return view('home', ['title' => 'Home', 'products' => $products]);
+});
+
+Route::get('/pakaian-pria', function () {
+    $products = DB::table('products')
+        ->where('kategori', 'pakaian pria')
+        ->get();
+    return view('pakaianpria', ['title' => 'Pakaian Pria', 'products' => $products]);
+});
+
+Route::get('/pakaian-wanita', function () {
+    $products = DB::table('products')
+        ->where('kategori', 'pakaian wanita')
+        ->get();
+    return view('pakaianwanita', ['title' => 'Pakaian Wanita', 'products' => $products]);
 });

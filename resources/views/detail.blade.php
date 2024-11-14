@@ -7,7 +7,7 @@
             <!-- Product Image Section -->
             <div class="rounded-lg overflow-hidden shadow-lg border bg-white">
                 <div class="flex justify-center items-center p-4">
-                    <img src="{{ asset($product->img) ?? asset('img/product1.jpg') }}" 
+                    <img src="{{ $product->img ? asset($product->img) : asset('img/product1.jpg') }}" 
                          alt="{{ $product->produk }}" 
                          class="w-full h-auto max-w-lg object-contain"
                          onerror="this.src='{{ asset('img/product1.jpg') }}'">
@@ -20,8 +20,8 @@
                 <h1 class="text-4xl font-extrabold text-black-600">{{ $product->produk }}</h1>
                 
                 <!-- Price -->
-                <div class="text-3xl font-semibold text-black-500">
-                    Rp {{ number_format($product->harga, 0, ',', '.') }}
+                <div class="text-3xl font-semibold text-gray-500">
+                    Rp {{ number_format((float)$product->harga, 0, ',', '.') }}
                 </div>
 
                 <!-- Product Description -->
