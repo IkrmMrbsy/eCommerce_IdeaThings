@@ -52,7 +52,8 @@ Route::get('/taspria', function () {
 });
 
 Route::get('/taswanita', function () {
-    return view('taswanita' , ['title'=> 'Tas Wanita']);
+	$kategori = DB::table('products')->where('kategori','=','tas wanita')->get();
+	return view ('taswanita' , ['title'=> 'Tas Wanita','products' => $kategori] );
 });
 
 Route::get('/aksesoris', function () {
