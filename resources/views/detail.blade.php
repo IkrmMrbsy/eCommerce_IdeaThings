@@ -47,7 +47,7 @@
                 <div class="mt-6">
                     <a href="{{ $product->link }}" target="_blank"
                        class="block w-full text-center bg-[#3eb640] text-white px-6 py-3 rounded-lg hover:bg-[#37a537] transition duration-300">
-                        Tokopedia
+                        BELI SEKARANG
                     </a>
                 </div>
 
