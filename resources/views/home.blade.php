@@ -37,24 +37,21 @@
     </div>
 </x-layout>
 
-<!-- Include jQuery for AJAX -->
+<!--jQuery-->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
     $(document).ready(function () {
-        // Ketika input pencarian berubah
         $('#search-input').on('input', function () {
-            var query = $(this).val(); // Ambil nilai input pencarian
+            var query = $(this).val(); 
 
-            // AJAX request untuk mengirim query pencarian ke server
             $.ajax({
-                url: '{{ route("search") }}', // Arahkan ke route search
+                url: '{{ route("search") }}', 
                 method: 'GET',
                 data: {
-                    query: query // Kirimkan query pencarian
+                    query: query
                 },
                 success: function (data) {
-                    // Update daftar produk dengan hasil pencarian
                     $('#product-list').html(data);
                 }
             });

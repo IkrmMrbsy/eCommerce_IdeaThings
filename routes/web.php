@@ -71,5 +71,5 @@ Route::get('/pakaian-wanita', function () {
     return view('pakaianwanita', ['title' => 'Pakaian Wanita', 'products' => $products]);
 });
 
-// Route untuk pencarian
+// Route pencarian
 Route::get('/search', [SearchController::class, 'search'])->name('search');
