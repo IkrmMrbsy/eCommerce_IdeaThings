@@ -2,10 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
-
-
-
-
+use App\Http\Controllers\SearchController;
 
 Route::get('/', function () {
     $products = DB::table('products')->get();
@@ -60,11 +57,6 @@ Route::get('/aksesoris', function () {
     return view('aksesoris' , ['title'=> 'Aksesoris']);
 });
 
-Route::get('/', function () {
-    $products = DB::table('products')->get();
-    return view('home', ['title' => 'Home', 'products' => $products]);
-});
-
 Route::get('/pakaian-pria', function () {
     $products = DB::table('products')
         ->where('kategori', 'pakaian pria')
@@ -78,3 +70,6 @@ Route::get('/pakaian-wanita', function () {
         ->get();
     return view('pakaianwanita', ['title' => 'Pakaian Wanita', 'products' => $products]);
 });
+
+// Route untuk pencarian
+Route::get('/search', [SearchController::class, 'search'])->name('search');
