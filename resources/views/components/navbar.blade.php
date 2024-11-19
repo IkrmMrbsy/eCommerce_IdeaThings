@@ -3,7 +3,9 @@
 		<div class="flex h-16 items-center justify-between">
 			<div class="flex items-center">
 				<div class="flex-shrink-0">
-					<img class="h-10 w-auto" src="/img/logo.png" alt="iDeaThings">
+					<a href="/">
+						<img class="h-10 w-auto" src="/img/logo.png" alt="iDeaThings">
+					</a>
 				</div>
 				<div class="ml-3 text-gray-800 font-bold text-lg">iDeaThings</div>
 				<div class="hidden md:block">
